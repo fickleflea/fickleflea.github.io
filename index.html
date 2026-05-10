@@ -6,6 +6,23 @@
     <title>The Fickle Flea</title>
     <link rel="icon" href="./flea2.jpg">
     <style>
+        #logo > input, #flead-flea > input {
+            display: none;
+        }
+
+        #logo > img, #flead-flea > img {
+            cursor: pointer;
+        }
+
+        #logo > input:checked + img {
+            content: url(./flea1.gif);
+        }
+
+        #flead-flea > input:checked + img {
+            content: url(./cutiebug.jpg);
+            height: 118px;
+        }
+
         body, header > h1 {
             margin-top: 0;
         }
@@ -22,14 +39,21 @@
 <body>
     <div id="app">
         <header>
-            <h1>The Fickle Flea</h1>
+            <label id="logo">
+                <input type="checkbox">
+                <img alt="The Fickle Flea" height="100px" src="./logo.png">
+            </label>
         </header>
         <main>
             <p>Vintage</p>
         </main>
     </div>
     <footer>
-        <img src="./drink.gif"><img src="flea2.jpg">
+        <img src="./drink.gif">
+        <label id="flead-flea">
+            <input type="checkbox">
+            <img height="29px" src="flea2.jpg">
+        </label>
     </footer>
 </body>
 </html>
