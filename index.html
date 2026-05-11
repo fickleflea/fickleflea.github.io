@@ -30,12 +30,20 @@
         }
 
         body, header > h1 {
-            margin-top: 0;
+            margin: 0;
+        }
+
+        header {
+            padding-top: 5px;
+            text-align: center;
         }
 
         #app {
             min-height: 100vh;
-            background: #86492D url("./wood-bg.jpg") fixed center left;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: center;
+            /* background: #86492D url("./wood-bg.jpg") fixed center left; */
         }
 
         h1 {
@@ -43,8 +51,14 @@
         }
 
         p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.4em;
             background-color: #FFFB;
             box-shadow: 0px 0px 5px #FFFB;
+        }
+
+        footer {
+            display: none;
         }
     </style>
 </head>
@@ -52,7 +66,7 @@
     <div id="app">
         <header>
             <label id="logo">
-                <input type="checkbox">
+                <input type="checkbox" disabled>
                 <img alt="The Fickle Flea" title="all things vintage" height="100px" src="./logo.png">
             </label>
             <nav id="socials">
@@ -62,13 +76,10 @@
                 <a href="https://www.facebook.com/TheFickleFlea/">
                     <img width="64px" height="64px" src="./fleabook.svg">
                 </a>
-                <a href="https://www.etsy.com/shop/thefickleflea">
-                    <img width="64px" height="64px" src="./fletsy.svg">
-                </a>
             </nav>
         </header>
         <main>
-            <p>Vintage</p>
+            <p>Your one-stop shop for all things vintage!</p>
         </main>
     </div>
     <footer>
