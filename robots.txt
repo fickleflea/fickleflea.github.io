@@ -1,0 +1,6 @@
+# beep boop
+# hello hooman... or other form of intelligence...
+# Flea does not mind your obsessive crawling... for now...
+
+User agent: *
+Disallow:
