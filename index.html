@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Fickle Flea</title>
     <link rel="icon" href="./flea2.jpg">
+    <base target="_blank" />
     <style>
         #logo > input, #flead-flea > input {
             display: none;
@@ -50,8 +51,13 @@
             /* background: #86492D url("./wood-bg.jpg") fixed center left; */
         }
 
-        h1 {
+        h1, details {
             font-family: cursive;
+        }
+
+        summary {
+            font-size: 1.6em;
+            cursor: pointer;
         }
 
         p {
@@ -64,6 +70,67 @@
         footer {
             display: none;
         }
+
+        .directions {
+            border: solid 12.5px #F0F0F0;
+            border-radius: 25px;
+            margin-bottom: 5px;
+        }
+
+        .location::before {
+            content: "📍 ";
+        }
+
+        .spot::before {
+            content: "⛺️ ";
+        }
+
+        .code::before {
+            content: "🏷️ ";
+        }
+
+        .directions > a > img {
+            margin-top: 10px;
+        }
+
+        .location > a > img {
+            height: 1em;
+        }
+
+        .uninvert {
+            filter: invert(1);
+        }
+
+        .noselect {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+                color: #F0F0F0;
+            }
+
+            p {
+                background-color: #0004;
+                box-shadow: 0px 0px 5px #0004;
+            }
+
+            .directions {
+                border: solid 12.5px #161616;
+                border-radius: 25px;
+            }
+
+            .invert {
+                filter: invert(1);
+            }
+
+            .uninvert {
+                filter: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -75,15 +142,30 @@
             </label>
             <nav id="socials">
                 <a href="https://www.instagram.com/jennyv_thefickleflea/">
-                    <img alt="Instagram" width="64px" height="64px" src="./instaflea.svg">
+                    <img alt="Instagram" title="Instaflea" width="64px" height="64px" src="./instaflea.svg">
                 </a>
                 <a href="https://www.facebook.com/TheFickleFlea/">
-                    <img alt="Facebook" width="64px" height="64px" src="./fleabook.svg">
+                    <img alt="Facebook" title="Fleabook" width="64px" height="64px" src="./fleabook.svg">
                 </a>
             </nav>
         </header>
         <main>
             <p>Your one-stop shop for all things vintage!</p>
+            <details class="directions">
+                <summary class="noselect">Directions</summary>
+                <a href="https://www.luckettstore.com/"><img class="invert" alt="The Old Lucketts Store" title="The Old Lucketts Store" height="64px" src="oldlucketts.png"></a>
+                <p class="code">V V</p>
+                <p class="location">42350 Lucketts Rd, Leesburg, VA 20176<span class="noselect"> <a href="https://maps.apple.com/?address=42350%20Lucketts%20Rd,%20Leesburg,%20VA%20%2020176,%20United%20States&auid=17761745877208828988&ll=39.215950,-77.534309&lsp=9902&q=The%20Old%20Lucketts%20Store"><img class="invert" alt="Apple Maps" src="apple.svg" height="22.3984px"></a> <a href="https://maps.app.goo.gl/AZPDvtgegein16xi7"><img alt="Google Maps" src="gmaps.svg" height="22.3984px"></a></span></p>
+                <p class="spot">second floor at the end of the short hallway on the left<br>+ back-left pavillion outside next to Foundry</p>
+                <a href="https://bazaaron21st.com/"><img alt="It's Bazaar on 21st Street" title="It's Bazaar on 21st Street" height="128px" src="bazaar.png"></a>
+                <p class="code">HOPE</p>
+                <p class="location">143 N 21st St, Purcellville, VA 20132<span class="noselect"> <a href="https://maps.apple.com/?address=143%20N%2021st%20St,%20Purcellville,%20VA%20%2020132,%20United%20States&auid=13305983769508575017&ll=39.137568,-77.715754&lsp=9902&q=It's%20Bazaar%20On%2021st%20Street"><img class="invert" alt="Apple Maps" src="apple.svg" height="22.3984px"></a> <a href="https://maps.app.goo.gl/Wfz8eSeBZ2FoNU8h7"><img alt="Google Maps" src="gmaps.svg" height="22.3984px"></a></span></p>
+                <p class="spot">first floor on the left</p>
+                <a href="https://younglucketts.com/"><img alt="Young Lucketts Vintage Store" title="Young Lucketts Vintage Store" height="128px" src="younglucketts.svg"></a>
+                <p class="code">ICN</p>
+                <p class="location">12810 James Monroe Hwy, Leesburg, VA 20176<span class="noselect"> <a href="https://maps.apple.com/?address=12810%20James%20Monroe%20Hwy,%20Leesburg,%20VA%20%2020176,%20United%20States&auid=7220747046599747126&ll=39.260564,-77.544016&lsp=9902&q=Young%20Lucketts"><img class="invert" alt="Apple Maps" src="apple.svg" height="22.3984px"></a> <a href="https://maps.app.goo.gl/HSCy136EAJPiichdA"><img alt="Google Maps" src="gmaps.svg" height="22.3984px"></a></span></p>
+                <p class="spot">first floor in the front-right corner by the other door</p>
+            </details>
         </main>
     </div>
     <footer>
